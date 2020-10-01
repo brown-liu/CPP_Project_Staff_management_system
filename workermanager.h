@@ -56,4 +56,6 @@ public:
 	void Find_Emp();
 		
 	void Sort_Emp();
+
+	void Clean_file();
 };

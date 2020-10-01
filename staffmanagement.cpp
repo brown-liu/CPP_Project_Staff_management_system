@@ -83,7 +83,7 @@ int main()
 			break;
 
 		case 7:
-			cout << "this is 7" << endl;
+			wm.Clean_file();
 			system("pause");
 			break;
 

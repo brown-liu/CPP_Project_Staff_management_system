@@ -399,8 +399,33 @@ void WorkerManager::Sort_Emp()
 
 		}
 	}
-}
+} 
 
+
+void WorkerManager::Clean_file()
+{
+	char choice;
+	cout << "Are you sure to delete everything?, Press 'y' to confirm" << endl;
+	cin >> choice;
+	if (choice == 'y')
+	{
+		ofstream ofs;
+		ofs.open(FILENAME,ios::trunc);
+		ofs.close();
+		for (int x = 0; x < this->m_EmpNum; x++)
+		{
+			delete this->m_EmpArray[x];
+			this->m_EmpArray[x] = NULL;
+		}
+		this->m_EmpNum = 0;
+		delete[] this->m_EmpArray;
+		this->m_FileIsEmpty = true;
+	}
+
+	else {
+		return;
+	}
+}
 
 
 
